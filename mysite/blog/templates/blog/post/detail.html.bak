@@ -18,7 +18,7 @@
 	<p>There are no comments yet.</p>
 {% endfor %}
 <h2>Add a new comment</h2>
-	<form action="{% url 'blog:post_comment' post.id %}" method="post">
+	<form action="{% url "blog:post_comment" post.id %}" method="post">
 		{{ form.as_p }}
 		{% csrf_token %}
 		<p><input type="submit" value="Add comment"></p>
